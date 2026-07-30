@@ -20,3 +20,4 @@ variable "ssh_key_ids" {
   type    = list(string)
   default = []
 }
+
