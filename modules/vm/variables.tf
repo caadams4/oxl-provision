@@ -21,3 +21,8 @@ variable "ssh_key_ids" {
   default = []
 }
 
+variable "data_disk_gb" {
+  type    = number
+  default = 0
+  description = "0 = no extra disk"
+}
