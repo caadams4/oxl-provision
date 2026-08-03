@@ -26,3 +26,14 @@ variable "data_disk_gb" {
   default = 0
   description = "0 = no extra disk"
 }
+
+variable "network_id" {
+  type    = string
+  default = null
+}
+
+variable "private_ip" {
+  type    = string
+  default = null
+  description = "fixed address in 10.40.0.0/16, leave null to let oxl pick"
+}

@@ -4,6 +4,9 @@ resource "oxlantern_vm" "this" {
   image       = var.image
   region      = var.region
   ssh_key_ids = var.ssh_key_ids
+
+  network_id = var.network_id
+  private_ip = var.private_ip
 }
 
 resource "oxlantern_disk" "data" {
