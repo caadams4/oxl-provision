@@ -15,6 +15,6 @@ module "pg" {
 
   name          = each.key
   region        = "ams-1"
-  pg_version    = "14"
+  pg_version    = "16"
   allowed_cidrs = ["10.40.20.0/24"]
 }
