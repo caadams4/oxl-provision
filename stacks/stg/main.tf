@@ -18,3 +18,11 @@ module "pg" {
   pg_version    = "16"
   allowed_cidrs = ["10.40.20.0/24"]
 }
+
+module "backup" {
+  source = "../../modules/backup-policy"
+
+  name           = "stg-nightly"
+  target_ids     = [for m in module.pg : m.id]
+  retention_days = 0
+}
