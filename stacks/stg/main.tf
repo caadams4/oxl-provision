@@ -24,5 +24,5 @@ module "backup" {
 
   name           = "stg-nightly"
   target_ids     = [for m in module.pg : m.id]
-  retention_days = 0
+  retention_days = 7
 }

@@ -11,5 +11,5 @@ variable "schedule" {
 
 variable "retention_days" {
   type    = number
-  default = 0
+  default = 14
 }
