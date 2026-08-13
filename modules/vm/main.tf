@@ -16,3 +16,26 @@ resource "oxlantern_disk" "data" {
   region  = var.region
   vm_id   = oxlantern_vm.this.id
 }
+
+resource "oxlantern_firewall" "this" {
+  name  = "${var.name}-fw"
+  vm_id = oxlantern_vm.this.id
+
+  dynamic "rule" {
+    for_each = length(var.allow_ssh_from) > 0 ? [1] : []
+    content {
+      proto  = "tcp"
+      port   = 22
+      source = var.allow_ssh_from
+    }
+  }
+
+  dynamic "rule" {
+    for_each = var.allow_tcp
+    content {
+      proto  = "tcp"
+      port   = tonumber(rule.key)
+      source = rule.value
+    }
+  }
+}

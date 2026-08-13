@@ -37,3 +37,15 @@ variable "private_ip" {
   default = null
   description = "fixed address in 10.40.0.0/16, leave null to let oxl pick"
 }
+
+variable "allow_ssh_from" {
+  type    = list(string)
+  default = []
+  description = "CIDRs allowed on 22. Normally just the jump hosts / vpn range"
+}
+
+variable "allow_tcp" {
+  type    = map(list(string))
+  default = {}
+  # { "8443" = ["10.40.4.0/24"] }
+}

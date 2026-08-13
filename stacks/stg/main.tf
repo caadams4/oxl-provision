@@ -7,6 +7,8 @@ module "api" {
   size           = "m2.medium"
   ssh_key_ids    = var.ssh_key_ids
   network_id     = "stg-private"
+  allow_ssh_from = var.jump_cidrs
+  allow_tcp      = { "8443" = ["10.40.20.0/24"] }
 }
 
 module "pg" {
