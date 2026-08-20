@@ -13,3 +13,9 @@ variable "retention_days" {
   type    = number
   default = 14
 }
+
+variable "offsite" {
+  type    = bool
+  default = false
+  description = "copy to the second hall (ams <-> slo)"
+}
