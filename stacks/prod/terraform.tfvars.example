@@ -1,0 +1,2 @@
+ssh_key_ids = []
+jump_cidrs  = ["10.40.0.0/24"]
