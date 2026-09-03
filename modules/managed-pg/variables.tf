@@ -25,3 +25,9 @@ variable "allowed_cidrs" {
   type    = list(string)
   default = []
 }
+
+variable "maintenance_window" {
+  type    = string
+  default = "sat 22:00-02:00"
+  description = "UTC. uk time is +1 in summer, check before you set it"
+}

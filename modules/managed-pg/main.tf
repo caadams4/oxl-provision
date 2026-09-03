@@ -6,4 +6,6 @@ resource "oxlantern_pg_cluster" "this" {
   size          = var.size
   storage_gb    = var.storage_gb
   allowed_cidrs = var.allowed_cidrs
+
+  maintenance_window = var.maintenance_window
 }
