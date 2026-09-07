@@ -3,7 +3,7 @@ variable "region" { type = string }
 
 variable "pg_version" {
   type    = string
-  default = "14"
+  default = "16"
 }
 
 variable "nodes" {

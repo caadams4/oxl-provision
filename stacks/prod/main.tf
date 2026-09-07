@@ -18,7 +18,7 @@ module "pg" {
 
   name          = each.key
   region        = "slo-1"
-  pg_version    = "14"
+  pg_version    = "16"
   nodes         = 2
   size          = "db.m2.xlarge"
   storage_gb    = 500
