@@ -3,7 +3,7 @@ terraform {
   required_providers {
     oxlantern = {
       source  = "oxlantern/oxlantern"
-      version = "~> 3.0"
+      version = "~> 3.1"
     }
   }
 }
