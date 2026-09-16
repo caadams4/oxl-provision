@@ -7,6 +7,7 @@ resource "oxlantern_vm" "this" {
 
   network_id = var.network_id
   private_ip = var.private_ip
+  labels     = merge({ managed_by = "oxl-provision" }, var.labels)
 }
 
 resource "oxlantern_disk" "data" {

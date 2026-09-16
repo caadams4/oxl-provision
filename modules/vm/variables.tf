@@ -49,3 +49,8 @@ variable "allow_tcp" {
   default = {}
   # { "8443" = ["10.40.4.0/24"] }
 }
+
+variable "labels" {
+  type    = map(string)
+  default = {}
+}

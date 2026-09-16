@@ -5,3 +5,7 @@ output "id" {
 output "private_ip" {
   value = oxlantern_vm.this.private_ip
 }
+
+output "name" {
+  value = oxlantern_vm.this.name
+}
