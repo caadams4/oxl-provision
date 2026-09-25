@@ -3,7 +3,7 @@
 Terraform modules for our Oxlantern VMs, managed Postgres and backups.
 Owner: Ravi (r.teague@oxlantern.net).
 
-Current release: **v0.5**, written for oxlantern provider **3.0**.
+Current release: **v0.7**, written for oxlantern provider **3.1**.
 
 ```
 cp stacks/stg/.env.example stacks/stg/.env   # fill it in
