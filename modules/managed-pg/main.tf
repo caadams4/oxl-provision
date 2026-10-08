@@ -9,3 +9,5 @@ resource "oxlantern_pg_cluster" "this" {
 
   maintenance_window = var.maintenance_window
 }
+
+# TODO pgbouncer pool settings, oxl api doesnt expose them yet (asked 2026-08)
