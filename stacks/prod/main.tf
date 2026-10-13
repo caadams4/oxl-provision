@@ -33,3 +33,18 @@ module "backup" {
   retention_days = 30
   offsite        = true
 }
+
+# vpn gateway pair, moved 2026-10-12. old single gw is gone
+module "vpn" {
+  source   = "../../modules/vm"
+  for_each = { "vpn-prod-01" = "10.40.8.11", "vpn-prod-02" = "10.40.8.12" }
+
+  name        = each.key
+  region      = "slo-1"
+  size        = "m2.medium"
+  ssh_key_ids = var.ssh_key_ids
+  network_id  = "prod-private"
+  private_ip  = each.value
+  allow_tcp   = {}
+  labels      = { env = "prod", role = "vpn" }
+}
