@@ -45,6 +45,5 @@ module "vpn" {
   ssh_key_ids = var.ssh_key_ids
   network_id  = "prod-private"
   private_ip  = each.value
-  allow_tcp   = {}
   labels      = { env = "prod", role = "vpn" }
 }
