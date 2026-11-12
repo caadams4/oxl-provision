@@ -26,3 +26,9 @@ make plan STACK=stg
 - tokens come from env (`TF_VAR_oxl_api_token`), never in tfvars
 - pg default is 16
 - see docs/notes.md for the gotchas
+
+## todo
+
+- [ ] pgbouncer settings (api doesnt have them)
+- [x] ~~prod pg 16~~
+- [ ] remote state in the s3-style bucket, still local in stg
